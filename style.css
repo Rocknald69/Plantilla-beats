@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,600;800,1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,600;0,900,1,300&display=swap');
+
 :root {
     --color-logo: #ed1c24;
     --font-primary: 'Poppins', sans-serif;
@@ -27,7 +28,7 @@ a {
     height: 60vh;
  }
 
-header:before {
+header::before {
     content: '';
     position: absolute;
     height: 60vh;
@@ -81,7 +82,7 @@ header .header_container nav  .nav_menu .menu_list {
 }
 
 .header_info .header_titulo {
-    font-weight: 800;
+    font-weight: 900;
     color: var(--color-logo);
     font-size: 4rem;
     text-align: center;
@@ -139,8 +140,10 @@ header .header_container nav  .nav_menu .menu_list {
  .info_detalles h3 {
     font-size: 5rem;
     font-family: var(--font-primary);
-    font-weight: 800;
+    font-weight: 900;
     line-height: 90%;
+    letter-spacing: -5px;
+
 }
 
  .info_detalles p {
@@ -148,19 +151,77 @@ header .header_container nav  .nav_menu .menu_list {
     font-family: var(--font-primary);
 }
 
-
-.imagen_producto {
-
-}
  .imagen_producto img {
     width: 50vw;
     position: absolute;
     bottom: 55vh;
 }
 
+/* Hero Section Tecnologia */
 
+.tecnologia {
+    height: 50vw;
+}
 
+.tecnologia::before {
+    content:'';
+    position: absolute;
+    height: 55vw;
+    width: 100vw;
+    background-image: url(/image/FONDO_2.jpg);
+    background-size: cover;
+    background-position: right 100% top;
+    z-index: -1;
+    /* filter:blur(2px); */
+}
 
+/* Hero section3 Articulos */
+
+.info_producto_articulos {
+    margin: 100px 0;
+}
+
+.info_titulo {
+    text-align: center;
+    font-size: 3rem;
+    font-family: var(--font-primary);
+    text-transform: capitalize;
+    font-weight: 900;
+    letter-spacing: -3px;
+}
+
+.info_titulo_detalle {
+    text-align: center;
+    font-family: var(--font-primary);
+    color: gray;
+    font-weight: 900;
+}
+
+.modelos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 90%;
+    margin: auto;
+    place-items: center;
+    color: gray;
+}
+
+.beat_imagen {
+    width: 200px;
+}
+
+.modelos li {
+    display: grid;
+    place-items: center;
+}
+
+.modelos li p {
+    color: var(--color-logo);
+}
+
+.beat_detalle {
+    font-family: var(--font-primary);
+}
 
 
 /* Media Querys*/
@@ -171,16 +232,18 @@ header .header_container nav  .nav_menu .menu_list {
     .imagen_producto img {
         height: 50vw;
         position: absolute;
-        top: 55vh;
-
+        top: 40vh;
+    }
 }
-
 @media (max-width: 1200px) {
     .info_detalles h3 {
         font-size: 3rem;
         font-family: var(--font-primary);
         line-height: 90%;
     }
+
+
+
 }
 @media (max-width: 850px) {
     header .header_container {
@@ -254,5 +317,18 @@ header .header_container nav  .nav_menu .menu_list {
         position: absolute;
         top: 55vh;
     }
-}
+
+    .modelos {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 30px;
+        width: 90%;
+        place-content: center;
+        text-align: center;
+    }
+    
+    .beat_imagen {
+        width: 350px;
+    }
+    
 }
