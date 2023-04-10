@@ -32,9 +32,9 @@ header:before {
     position: absolute;
     height: 60vh;
     width: 100vw;
-    background: linear-gradient(to top right, #ed1c2422,#3d000033 , #ed1c2422), url(image/FONDO.jpg);
+    background-image: linear-gradient(to top right, #ed1c2422,#3d000033 , #ed1c2422), url(image/FONDO.jpg);
     background-size: cover;
-    background-position: center;
+    background-position: center ;
     z-index: -1;
 
 }
@@ -116,8 +116,72 @@ header .header_container nav  .nav_menu .menu_list {
     border: none;
 }
 
-/* Header- Media Querys*/
 
+/* Info Producto HERO */
+
+.info_producto {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+}
+
+ .info_detalles {
+    height: 500px;
+    width: 70%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px; 
+
+}
+
+ .info_detalles h3 {
+    font-size: 5rem;
+    font-family: var(--font-primary);
+    font-weight: 800;
+    line-height: 90%;
+}
+
+ .info_detalles p {
+    font-size: 1rem;
+    font-family: var(--font-primary);
+}
+
+
+.imagen_producto {
+
+}
+ .imagen_producto img {
+    width: 50vw;
+    position: absolute;
+    bottom: 55vh;
+}
+
+
+
+
+
+
+/* Media Querys*/
+@media (max-width: 1500px) {
+    .info_detalles {
+        width: 90%;
+    }
+    .imagen_producto img {
+        height: 50vw;
+        position: absolute;
+        top: 55vh;
+
+}
+
+@media (max-width: 1200px) {
+    .info_detalles h3 {
+        font-size: 3rem;
+        font-family: var(--font-primary);
+        line-height: 90%;
+    }
+}
 @media (max-width: 850px) {
     header .header_container {
         width: 80%;
@@ -130,6 +194,18 @@ header .header_container nav  .nav_menu .menu_list {
 
     header .header_container .logo {
         height: 10vh;
+    }
+    /*  Hero */
+    .imagen_producto img {
+        width: fit-content;
+        position: absolute;
+        top: 65vh;
+    }
+
+    .info_detalles p {
+        font-size: 1rem;
+        font-family: var(--font-primary);
+        line-height: 90%;
     }
 
 }
@@ -150,4 +226,33 @@ header .header_container nav  .nav_menu .menu_list {
         font-size: 3rem;
         line-height: 90%;
     }
+
+    /* hero */
+
+    .info_producto {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .imagen_producto {
+        display: flex;
+        justify-content: center;
+    }
+
+    section .info_detalles {
+        margin-top: 200px;
+        display: flex;
+        align-items: center;
+    }
+    
+    section .info_detalles p {
+        text-align: center;
+    }
+
+    section .info_detalles img {
+        height: 360px;
+        position: absolute;
+        top: 55vh;
+    }
+}
 }
