@@ -222,6 +222,88 @@ header .header_container nav  .nav_menu .menu_list {
 .beat_detalle {
     font-family: var(--font-primary);
 }
+/* Youtube video */
+
+.youtube {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 150px;
+}
+
+/* footer */
+
+footer {
+	background-color: black;
+}
+
+.footer_container {
+	width: 80%;
+	height: 400px;
+	margin: auto;
+	display: grid;
+	grid-gap: 20px;
+	grid-template-columns: repeat(2, 1fr);
+	place-items: center;
+}
+
+.info_footer {
+display: flex;
+align-items: center;
+gap: 25px;
+font-family: var(--font-primary);
+line-height: 3rem;
+font-size: 2rem;
+}
+
+.info_footer img {
+	width: 150px;
+}
+
+.newsletter {
+	color: white;
+	font-family: var(--font-primary);
+	font-size: 2rem;
+}
+
+
+.input {
+	height: 30px;
+	width: 300px ;
+}
+
+[name="email"] {
+	text-transform: capitalize;
+	padding: .5rem;
+}
+
+
+.footerLine  {
+	color: white;
+	grid-area: 2 /span 2;
+}
+
+.redes {
+	width: 100%;
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	grid-gap: 8px;
+
+	place-items: center;
+	place-content: center;
+}
+.redes li i {
+	font-size:2rem;
+	margin-bottom: 10px;
+}
+
+.copyright {
+	text-align: center;
+}
+
+.copyright span {
+	color: var(--color-logo);
+}
 
 
 /* Media Querys*/
@@ -232,7 +314,7 @@ header .header_container nav  .nav_menu .menu_list {
     .imagen_producto img {
         height: 50vw;
         position: absolute;
-        top: 40vh;
+        top: 50vh;
     }
 }
 @media (max-width: 1200px) {
@@ -331,4 +413,8 @@ header .header_container nav  .nav_menu .menu_list {
         width: 350px;
     }
     
+		/* foooter */
+		.info_footer img {
+		display: none;
+		}	
 }
