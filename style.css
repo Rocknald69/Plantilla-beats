@@ -9,6 +9,7 @@
     padding: 0;
     box-sizing: border-box;
     list-style: none;
+
 }
 
 *,
@@ -23,6 +24,9 @@ a {
 }
 
  /* Header */
+ body {
+    overflow-x: hidden;
+ }
 
  header {
     height: 60vh;
@@ -387,12 +391,16 @@ font-size: 2rem;
     section .info_detalles {
         margin-top: 200px;
         display: flex;
-        align-items: center;
+
     }
     
-    section .info_detalles p {
+    section .info_detalles p{
         text-align: center;
     }
+
+		.info_detalles h3 {
+			text-align: center;
+		}
 
     section .info_detalles img {
         height: 360px;
@@ -410,11 +418,26 @@ font-size: 2rem;
     }
     
     .beat_imagen {
-        width: 350px;
+        width: 320px;
     }
     
-		/* foooter */
-		.info_footer img {
-		display: none;
-		}	
+    /* foooter */
+    .footer_container {
+        display: block;
+        text-align: center;
+        height: auto;
+    }
+
+    .info_footer {
+    display: block;
+    margin-bottom: 1rem;
+   }
+
+    .info_footer img {
+        display: none;
+    }	
+    
+    .redes {
+        padding-top: 1rem;
+    }
 }
